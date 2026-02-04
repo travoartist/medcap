@@ -1,0 +1,117 @@
+import { motion } from "framer-motion";
+import { useInView } from "framer-motion";
+import { useRef } from "react";
+import { Sparkles, Waves, Mountain, Utensils } from "lucide-react";
+import recoveryImage from "@/assets/recovery.jpg";
+import hotelImage from "@/assets/hotel.jpg";
+import clinicImage from "@/assets/clinic.jpg";
+
+const experiences = [
+  {
+    title: "VIP Airport Transfers",
+    description: "Luxury vehicles and personalized welcome",
+    icon: Sparkles,
+  },
+  {
+    title: "Beach Recovery",
+    description: "Serene coastal healing environments",
+    icon: Waves,
+  },
+  {
+    title: "Cultural Escapes",
+    description: "Explore India's rich heritage",
+    icon: Mountain,
+  },
+  {
+    title: "Gourmet Dining",
+    description: "Curated culinary experiences",
+    icon: Utensils,
+  },
+];
+
+const galleryImages = [
+  {
+    src: hotelImage,
+    alt: "Luxury 5-star hotel suite for dental tourism patients",
+    title: "Premium Accommodations",
+  },
+  {
+    src: recoveryImage,
+    alt: "Serene beach recovery experience in Goa",
+    title: "Beach Recovery",
+  },
+  {
+    src: clinicImage,
+    alt: "World-class dental clinic interior",
+    title: "State-of-the-Art Care",
+  },
+];
+
+export default function RelaxationGallery() {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: "-100px" });
+
+  return (
+    <section className="section-padding relative overflow-hidden bg-gradient-to-b from-background to-accent/20">
+      <div className="container mx-auto relative z-10" ref={ref}>
+        {/* Section Header */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-16"
+        >
+          <span className="badge-premium mb-4 inline-block">Beyond Treatment</span>
+          <h2 className="section-title">
+            Care That <span className="text-primary-deep">Rejuvenates</span>
+          </h2>
+          <p className="section-subtitle">
+            Your dental journey becomes a transformative retreat with premium relaxation experiences
+          </p>
+        </motion.div>
+
+        {/* Gallery Grid */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+          {galleryImages.map((image, index) => (
+            <motion.div
+              key={image.title}
+              initial={{ opacity: 0, y: 30 }}
+              animate={isInView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              className="group relative rounded-3xl overflow-hidden shadow-card"
+            >
+              <img
+                src={image.src}
+                alt={image.alt}
+                className="w-full h-72 object-cover transition-transform duration-700 group-hover:scale-110"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-foreground/70 via-foreground/20 to-transparent" />
+              <div className="absolute bottom-0 left-0 right-0 p-6">
+                <h3 className="font-serif text-xl font-bold text-cream">{image.title}</h3>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+
+        {/* Experience Cards */}
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
+          {experiences.map((exp, index) => (
+            <motion.div
+              key={exp.title}
+              initial={{ opacity: 0, y: 20 }}
+              animate={isInView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.4, delay: 0.4 + index * 0.1 }}
+              className="card-glass text-center py-6"
+            >
+              <div className="w-12 h-12 rounded-xl bg-primary/20 flex items-center justify-center mx-auto mb-4">
+                <exp.icon className="w-6 h-6 text-primary-deep" />
+              </div>
+              <h4 className="font-semibold text-foreground mb-1">{exp.title}</h4>
+              <p className="text-sm text-muted-foreground">{exp.description}</p>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
