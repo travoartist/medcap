@@ -50,15 +50,15 @@ export default function ExitPopup() {
             </button>
 
             {/* Header */}
-            <div className="bg-gradient-to-r from-primary to-secondary p-8 text-center">
-              <div className="w-16 h-16 rounded-full bg-cream/20 flex items-center justify-center mx-auto mb-4">
-                <Sparkles className="w-8 h-8 text-cream" />
+            <div className="bg-gradient-to-r from-primary-deep to-peacock p-8 text-center">
+              <div className="w-16 h-16 rounded-full bg-amber-100/20 flex items-center justify-center mx-auto mb-4">
+                <span className="text-3xl">🙏</span>
               </div>
-              <h3 className="font-serif text-2xl font-bold text-foreground mb-2">
-                Wait! Don't Miss Out
+              <h3 className="font-serif text-2xl font-bold text-white mb-2">
+                Wait! Let Us Welcome You
               </h3>
-              <p className="text-foreground/80">
-                Premium care from India's best dentists awaits you
+              <p className="text-white/90">
+                India's finest dentists are ready to care for you
               </p>
             </div>
 

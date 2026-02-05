@@ -45,12 +45,12 @@ export default function WhyIndia() {
       } : {}} transition={{
         duration: 0.6
       }} className="text-center mb-16">
-          <span className="badge-premium mb-4 inline-block">The MedCap Bridge</span>
+          <span className="badge-premium mb-4 inline-block">🌺 The MedCap Experience</span>
           <h2 className="section-title">
-            Why Choose <span className="text-primary-deep">India</span>?
+            Why Choose <span className="bg-gradient-to-r from-saffron to-terracotta bg-clip-text text-transparent">India</span>?
           </h2>
           <p className="section-subtitle">
-            Bridge the gap between global care challenges and premium Indian dental excellence
+            Where ancient hospitality meets modern excellence — experience care that treats you like family
           </p>
         </motion.div>
 

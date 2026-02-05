@@ -66,10 +66,10 @@ export default function Hero() {
           scale: 1
         }} transition={{
           delay: 0.2
-        }} className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-cream/90 backdrop-blur-sm mb-8 shadow-soft">
-            <Sparkles className="w-4 h-4 text-gold" />
-            <span className="text-sm font-medium text-foreground">
-              Premium Care, Transparently Delivered
+        }} className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-gradient-to-r from-amber-50/90 to-orange-50/90 backdrop-blur-sm mb-8 shadow-soft border border-amber-200/50">
+            <Sparkles className="w-4 h-4 text-amber-600" />
+            <span className="text-sm font-medium text-amber-900">
+              🙏 Namaste! Premium Care Awaits You
             </span>
           </motion.div>
 
