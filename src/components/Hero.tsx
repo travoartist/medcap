@@ -138,8 +138,8 @@ export default function Hero() {
         opacity: 1
       }} transition={{
         delay: 1
-      }} className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center text-cream/70 hover:text-cream transition-colors">
-          <span className="text-sm mb-2">Discover More</span>
+        }} className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center text-white/80 hover:text-white transition-colors drop-shadow-[0_1px_6px_rgba(0,0,0,0.4)]">
+          <span className="text-sm mb-2 font-medium">Discover More</span>
           <motion.div animate={{
           y: [0, 8, 0]
         }} transition={{
