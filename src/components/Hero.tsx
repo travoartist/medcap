@@ -66,25 +66,25 @@ export default function Hero() {
           scale: 1
         }} transition={{
           delay: 0.2
-        }} className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-cream/90 backdrop-blur-sm mb-8 shadow-soft">
-            <Sparkles className="w-4 h-4 text-gold" />
-            <span className="text-sm font-medium text-foreground">
-              Premium Care, Transparently Delivered
+        }} className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-gradient-to-r from-amber-50/90 to-orange-50/90 backdrop-blur-sm mb-8 shadow-soft border border-amber-200/50">
+            <Sparkles className="w-4 h-4 text-amber-600" />
+            <span className="text-sm font-medium text-amber-900">
+              🙏 Namaste! Premium Care Awaits You
             </span>
           </motion.div>
 
           {/* Main Headline */}
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-serif font-bold text-white mb-6 leading-tight drop-shadow-[0_2px_10px_rgba(0,0,0,0.5)]">
-            Connecting Global Patients to{" "}
-            <span className="bg-gradient-to-r from-indigo-300 via-violet-300 to-purple-300 bg-clip-text text-transparent drop-shadow-lg">
-              India's Best Dentists
-            </span>
+            Welcome to{" "}
+            <span className="bg-gradient-to-r from-amber-200 via-orange-200 to-yellow-200 bg-clip-text text-transparent drop-shadow-lg">
+              India's Finest
+            </span>{" "}
+            Dental Care
           </h1>
 
           {/* Subheadline */}
           <p className="text-lg md:text-xl text-white/95 mb-10 max-w-3xl mx-auto leading-relaxed drop-shadow-[0_1px_8px_rgba(0,0,0,0.4)]">
-            Experience world-class dental care with complete transparency. From visa assistance to recovery retreats, we craft your perfect care journey.
-          </p>
+            Experience heartfelt hospitality meets world-class expertise. We welcome you to a journey of premium dental care with the warmth India is known for.</p>
 
           {/* Journey Steps */}
           <motion.div initial={{
