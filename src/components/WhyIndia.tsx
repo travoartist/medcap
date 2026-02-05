@@ -110,8 +110,8 @@ export default function WhyIndia() {
                   <span className="text-secondary-deep mt-1">✓</span>
                   100% transparent pricing, no surprises
                 </li>
-                <li className="flex items-start gap-2">✓
-Luxury recovery with cultural escapes<span className="text-secondary-deep mt-1">✓</span>
+                <li className="flex items-start gap-2">
+                  <span className="text-secondary-deep mt-1">✓</span>
                   Luxury recovery with beach yoga & cultural escapes
                 </li>
               </ul>
