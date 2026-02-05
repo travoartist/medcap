@@ -104,10 +104,10 @@ export default function Hero() {
             y: 0
           }} transition={{
             delay: 0.5 + index * 0.1
-          }} className="flex items-center gap-2 text-cream/80">
+          }} className="flex items-center gap-2 text-white drop-shadow-[0_1px_6px_rgba(0,0,0,0.4)]">
                 <step.icon className="w-5 h-5" />
                 <span className="text-sm font-sans md:text-lg font-extrabold">{step.label}</span>
-                {index < journeySteps.length - 1 && <span className="hidden md:inline text-cream/40 ml-4">→</span>}
+                {index < journeySteps.length - 1 && <span className="hidden md:inline text-white/60 ml-4">→</span>}
               </motion.div>)}
           </motion.div>
 
