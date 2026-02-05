@@ -74,15 +74,15 @@ export default function Hero() {
           </motion.div>
 
           {/* Main Headline */}
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-serif font-bold text-cream mb-6 leading-tight">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-serif font-bold text-white mb-6 leading-tight drop-shadow-[0_2px_10px_rgba(0,0,0,0.5)]">
             Connecting Global Patients to{" "}
-            <span className="bg-gradient-to-r from-indigo-400 via-violet-400 to-purple-400 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-indigo-300 via-violet-300 to-purple-300 bg-clip-text text-transparent drop-shadow-lg">
               India's Best Dentists
             </span>
           </h1>
 
           {/* Subheadline */}
-          <p className="text-lg md:text-xl text-cream/90 mb-10 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-lg md:text-xl text-white/95 mb-10 max-w-3xl mx-auto leading-relaxed drop-shadow-[0_1px_8px_rgba(0,0,0,0.4)]">
             Experience world-class dental care with complete transparency. From visa assistance to recovery retreats, we craft your perfect care journey.
           </p>
 
