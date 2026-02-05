@@ -60,6 +60,9 @@ export default {
         "warm-white": "hsl(var(--warm-white))",
         gold: "hsl(var(--gold))",
         "gold-light": "hsl(var(--gold-light))",
+        saffron: "hsl(var(--saffron))",
+        terracotta: "hsl(var(--terracotta))",
+        peacock: "hsl(var(--peacock))",
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
