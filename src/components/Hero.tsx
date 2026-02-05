@@ -65,7 +65,7 @@ export default function Hero() {
           {/* Main Headline */}
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-serif font-bold text-cream mb-6 leading-tight">
             Connecting Global Patients to{" "}
-            <span className="text-gradient bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-indigo-400 via-violet-400 to-purple-400 bg-clip-text text-transparent">
               India's Best Dentists
             </span>
           </h1>
