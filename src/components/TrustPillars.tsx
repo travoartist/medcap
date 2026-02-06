@@ -84,19 +84,19 @@ export default function TrustPillars() {
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-8 sm:mb-12"
         >
-          <span className="badge-premium mb-4 inline-block">Our Promise</span>
+          <span className="badge-premium mb-3 inline-block text-xs sm:text-sm">Our Promise</span>
           <h2 className="section-title">
             Premium <span className="text-primary-deep">Trust Pillars</span>
           </h2>
           <p className="section-subtitle">
-            Five foundational principles that define every patient experience at MedCap Global
+            Five principles that define every patient experience
           </p>
         </motion.div>
 
         {/* Pillars Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
           {pillars.map((pillar, index) => (
             <motion.div
               key={pillar.title}
