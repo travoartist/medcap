@@ -78,23 +78,23 @@ export default function RelaxationGallery() {
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="group relative rounded-3xl overflow-hidden shadow-card"
+              className="group relative rounded-2xl sm:rounded-3xl overflow-hidden shadow-card"
             >
               <img
                 src={image.src}
                 alt={image.alt}
-                className="w-full h-72 object-cover transition-transform duration-700 group-hover:scale-110"
+                className="w-full h-48 sm:h-56 md:h-64 object-cover transition-transform duration-700 group-hover:scale-110"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-foreground/70 via-foreground/20 to-transparent" />
-              <div className="absolute bottom-0 left-0 right-0 p-6">
-                <h3 className="font-serif text-xl font-bold text-cream">{image.title}</h3>
+              <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-5">
+                <h3 className="font-serif text-base sm:text-lg font-bold text-cream">{image.title}</h3>
               </div>
             </motion.div>
           ))}
         </div>
 
         {/* Experience Cards */}
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
           {experiences.map((exp, index) => (
             <motion.div
               key={exp.title}
