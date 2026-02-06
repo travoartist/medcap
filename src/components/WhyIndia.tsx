@@ -44,18 +44,18 @@ export default function WhyIndia() {
         y: 0
       } : {}} transition={{
         duration: 0.6
-      }} className="text-center mb-16">
-          <span className="badge-premium mb-4 inline-block">🌺 The MedCap Experience</span>
+      }} className="text-center mb-8 sm:mb-12">
+          <span className="badge-premium mb-3 inline-block text-xs sm:text-sm">🌺 The MedCap Experience</span>
           <h2 className="section-title">
             Why Choose <span className="bg-gradient-to-r from-saffron to-terracotta bg-clip-text text-transparent">India</span>?
           </h2>
           <p className="section-subtitle">
-            Where ancient hospitality meets modern excellence — experience care that treats you like family
+            Where ancient hospitality meets modern excellence
           </p>
         </motion.div>
 
         {/* Split Layout */}
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        <div className="grid lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 items-center">
           {/* Left - Comparison */}
           <motion.div initial={{
           opacity: 0,
