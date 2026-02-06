@@ -83,41 +83,41 @@ export default function Testimonials() {
               className="card-premium relative"
             >
               {/* Quote Icon */}
-              <div className="absolute top-6 right-6 text-primary/20">
-                <Quote className="w-12 h-12" />
+              <div className="absolute top-4 right-4 text-primary/20">
+                <Quote className="w-8 h-8 sm:w-10 sm:h-10" />
               </div>
 
               {/* Rating */}
-              <div className="flex gap-1 mb-4">
+              <div className="flex gap-0.5 mb-3">
                 {[...Array(testimonial.rating)].map((_, i) => (
-                  <Star key={i} className="w-5 h-5 text-gold fill-gold" />
+                  <Star key={i} className="w-4 h-4 text-gold fill-gold" />
                 ))}
               </div>
 
               {/* Quote */}
-              <p className="text-foreground/80 leading-relaxed mb-6 text-lg italic">
+              <p className="text-foreground/80 leading-relaxed mb-4 text-sm sm:text-base italic line-clamp-4 sm:line-clamp-none">
                 "{testimonial.quote}"
               </p>
 
               {/* Divider */}
-              <div className="h-px bg-border mb-6" />
+              <div className="h-px bg-border mb-4" />
 
               {/* Author */}
-              <div className="flex items-center justify-between">
-                <div>
-                  <p className="font-serif font-bold text-foreground text-lg">
+              <div className="flex items-center justify-between gap-2">
+                <div className="min-w-0">
+                  <p className="font-serif font-bold text-foreground text-sm sm:text-base truncate">
                     {testimonial.name}
                   </p>
-                  <div className="flex items-center gap-2 text-muted-foreground text-sm">
+                  <div className="flex items-center gap-1.5 text-muted-foreground text-xs sm:text-sm">
                     <span>{testimonial.flag}</span>
-                    <MapPin className="w-3 h-3" />
-                    <span>{testimonial.location}</span>
+                    <MapPin className="w-3 h-3 flex-shrink-0" />
+                    <span className="truncate">{testimonial.location}</span>
                   </div>
-                  <p className="text-primary-deep text-sm mt-1">{testimonial.treatment}</p>
+                  <p className="text-primary-deep text-xs sm:text-sm mt-0.5">{testimonial.treatment}</p>
                 </div>
-                <div className="text-right">
-                  <p className="text-sm text-muted-foreground">Saved</p>
-                  <p className="font-bold text-secondary-deep text-lg">{testimonial.savings}</p>
+                <div className="text-right flex-shrink-0">
+                  <p className="text-xs text-muted-foreground">Saved</p>
+                  <p className="font-bold text-secondary-deep text-sm sm:text-base">{testimonial.savings}</p>
                 </div>
               </div>
             </motion.div>
