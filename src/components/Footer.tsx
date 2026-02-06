@@ -50,25 +50,25 @@ export default function Footer() {
         {/* Main Footer */}
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6 sm:gap-8 mb-10 sm:mb-12">
           {/* Brand */}
-          <div className="lg:col-span-2">
-            <div className="flex items-center gap-2 mb-6">
-              <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center">
+          <div className="col-span-2 lg:col-span-2">
+            <div className="flex items-center gap-2 mb-4">
+              <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-primary flex items-center justify-center">
                 <svg
                   viewBox="0 0 24 24"
-                  className="w-6 h-6 text-foreground"
+                  className="w-5 h-5 sm:w-6 sm:h-6 text-foreground"
                   fill="currentColor"
                 >
                   <path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm0 18c-4.4 0-8-3.6-8-8s3.6-8 8-8 8 3.6 8 8-3.6 8-8 8zm-1-6.5l-3-3 1.4-1.4 1.6 1.6 4.6-4.6 1.4 1.4-6 6z" />
                 </svg>
               </div>
-              <span className="font-serif text-xl font-bold text-cream">
+              <span className="font-serif text-lg sm:text-xl font-bold text-cream">
                 MedCap <span className="text-primary">Global</span>
               </span>
             </div>
-            <p className="text-cream/60 leading-relaxed mb-6 max-w-md">
-              Connecting global patients to India's best dentists. Premium dental care with complete transparency, luxury recovery, and 24/7 support.
+            <p className="text-cream/60 leading-relaxed mb-4 text-sm sm:text-base max-w-md">
+              Premium dental care with complete transparency and 24/7 support.
             </p>
-            <p className="text-lg font-medium text-primary italic">
+            <p className="text-sm sm:text-base font-medium text-primary italic hidden sm:block">
               "Premium Care, Transparently Delivered"
             </p>
           </div>
