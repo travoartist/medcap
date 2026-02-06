@@ -103,14 +103,14 @@ export default function DentistCarousel() {
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-8 sm:mb-12"
         >
-          <span className="badge-premium mb-4 inline-block">World-Class Specialists</span>
+          <span className="badge-premium mb-3 inline-block text-xs sm:text-sm">World-Class Specialists</span>
           <h2 className="section-title">
             India's <span className="text-primary-deep">Top Dentists</span>
           </h2>
           <p className="section-subtitle">
-            Meet our network of internationally-trained, BDS/MDS verified dental specialists
+            BDS/MDS verified dental specialists
           </p>
         </motion.div>
 
