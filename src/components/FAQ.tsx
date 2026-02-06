@@ -72,19 +72,19 @@ export default function FAQ() {
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-8 sm:mb-12"
         >
-          <span className="badge-premium mb-4 inline-block">Common Questions</span>
+          <span className="badge-premium mb-3 inline-block text-xs sm:text-sm">Common Questions</span>
           <h2 className="section-title">
             Frequently Asked <span className="text-primary-deep">Questions</span>
           </h2>
           <p className="section-subtitle">
-            Everything you need to know about your premium dental care journey with MedCap Global
+            Everything about your dental care journey
           </p>
         </motion.div>
 
         {/* FAQ Accordion */}
-        <div className="space-y-4">
+        <div className="space-y-3">
           {faqs.map((faq, index) => (
             <motion.div
               key={index}
