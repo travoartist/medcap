@@ -145,43 +145,43 @@ export default function DentistCarousel() {
                   initial={{ opacity: 0, y: 30 }}
                   animate={isInView ? { opacity: 1, y: 0 } : {}}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="card-premium min-w-[300px] md:min-w-[340px] lg:min-w-[calc(33.333%-1rem)] flex-shrink-0"
+                  className="card-premium min-w-[260px] sm:min-w-[280px] md:min-w-[300px] lg:min-w-[calc(33.333%-1rem)] flex-shrink-0"
                 >
                   {/* Image */}
-                  <div className="relative mb-6">
+                  <div className="relative mb-4">
                     <img
                       src={dentist.image}
                       alt={`${dentist.name} - ${dentist.specialty}`}
-                      className="w-full h-64 object-cover rounded-2xl"
+                      className="w-full h-48 sm:h-56 object-cover rounded-xl sm:rounded-2xl"
                     />
-                    <div className="absolute top-4 right-4 flex items-center gap-1 bg-cream/95 backdrop-blur-sm px-3 py-1.5 rounded-full">
-                      <Star className="w-4 h-4 text-gold fill-gold" />
-                      <span className="font-semibold text-sm text-foreground">
+                    <div className="absolute top-3 right-3 flex items-center gap-1 bg-cream/95 backdrop-blur-sm px-2 py-1 rounded-full">
+                      <Star className="w-3.5 h-3.5 text-gold fill-gold" />
+                      <span className="font-semibold text-xs text-foreground">
                         {dentist.rating}
                       </span>
                     </div>
                   </div>
 
                   {/* Info */}
-                  <div className="space-y-3">
-                    <div className="flex items-center gap-2 text-muted-foreground text-sm">
-                      <MapPin className="w-4 h-4" />
+                  <div className="space-y-2">
+                    <div className="flex items-center gap-1.5 text-muted-foreground text-xs sm:text-sm">
+                      <MapPin className="w-3.5 h-3.5" />
                       <span>{dentist.location}</span>
                       <span className="text-primary/40">•</span>
                       <span>{dentist.experience}</span>
                     </div>
-                    <h3 className="font-serif text-xl font-bold text-foreground">
+                    <h3 className="font-serif text-lg sm:text-xl font-bold text-foreground">
                       {dentist.name}
                     </h3>
-                    <p className="text-primary-deep font-medium">{dentist.specialty}</p>
-                    <div className="flex items-center gap-2">
-                      <Award className="w-4 h-4 text-secondary-deep" />
-                      <span className="text-sm text-muted-foreground">
+                    <p className="text-primary-deep font-medium text-sm">{dentist.specialty}</p>
+                    <div className="flex items-center gap-1.5">
+                      <Award className="w-3.5 h-3.5 text-secondary-deep" />
+                      <span className="text-xs text-muted-foreground">
                         {dentist.credentials}
                       </span>
                     </div>
-                    <p className="text-sm text-muted-foreground">
-                      {dentist.reviews} verified patient reviews
+                    <p className="text-xs text-muted-foreground">
+                      {dentist.reviews} verified reviews
                     </p>
                   </div>
                 </motion.div>

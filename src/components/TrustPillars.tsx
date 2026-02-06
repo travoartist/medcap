@@ -104,21 +104,21 @@ export default function TrustPillars() {
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className={`card-premium group ${
-                index === pillars.length - 1 ? "md:col-span-2 lg:col-span-1" : ""
+                index === pillars.length - 1 ? "sm:col-span-2 lg:col-span-1" : ""
               }`}
             >
               <div
-                className={`w-16 h-16 rounded-2xl ${getColorClasses(
+                className={`w-12 h-12 sm:w-14 sm:h-14 rounded-xl sm:rounded-2xl ${getColorClasses(
                   pillar.color
-                )} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}
+                )} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}
               >
-                <pillar.icon className="w-8 h-8" />
+                <pillar.icon className="w-6 h-6 sm:w-7 sm:h-7" />
               </div>
-              <h3 className="font-serif text-2xl font-bold text-foreground mb-2">
+              <h3 className="font-serif text-lg sm:text-xl font-bold text-foreground mb-1">
                 {pillar.title}
               </h3>
-              <p className="text-primary-deep font-medium mb-4">{pillar.description}</p>
-              <p className="text-muted-foreground leading-relaxed">{pillar.details}</p>
+              <p className="text-primary-deep font-medium text-sm mb-2">{pillar.description}</p>
+              <p className="text-muted-foreground leading-relaxed text-sm">{pillar.details}</p>
             </motion.div>
           ))}
         </div>

@@ -101,13 +101,13 @@ export default function RelaxationGallery() {
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.4, delay: 0.4 + index * 0.1 }}
-              className="card-glass text-center py-6"
+              className="card-glass text-center py-4 sm:py-5"
             >
-              <div className="w-12 h-12 rounded-xl bg-primary/20 flex items-center justify-center mx-auto mb-4">
-                <exp.icon className="w-6 h-6 text-primary-deep" />
+              <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-lg sm:rounded-xl bg-primary/20 flex items-center justify-center mx-auto mb-2 sm:mb-3">
+                <exp.icon className="w-5 h-5 sm:w-6 sm:h-6 text-primary-deep" />
               </div>
-              <h4 className="font-semibold text-foreground mb-1">{exp.title}</h4>
-              <p className="text-sm text-muted-foreground">{exp.description}</p>
+              <h4 className="font-semibold text-foreground text-sm sm:text-base mb-0.5">{exp.title}</h4>
+              <p className="text-xs sm:text-sm text-muted-foreground">{exp.description}</p>
             </motion.div>
           ))}
         </div>

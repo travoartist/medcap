@@ -129,21 +129,21 @@ export default function Testimonials() {
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5, delay: 0.5 }}
-          className="flex flex-wrap justify-center gap-8 mt-16"
+          className="flex flex-wrap justify-center gap-6 sm:gap-8 mt-10 sm:mt-14"
         >
           <div className="text-center">
-            <p className="text-4xl font-bold text-foreground">12,000+</p>
-            <p className="text-muted-foreground">Happy Patients</p>
+            <p className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground">12,000+</p>
+            <p className="text-muted-foreground text-xs sm:text-sm">Happy Patients</p>
           </div>
-          <div className="w-px bg-border hidden md:block" />
+          <div className="w-px bg-border hidden sm:block" />
           <div className="text-center">
-            <p className="text-4xl font-bold text-foreground">50+</p>
-            <p className="text-muted-foreground">Countries Served</p>
+            <p className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground">50+</p>
+            <p className="text-muted-foreground text-xs sm:text-sm">Countries Served</p>
           </div>
-          <div className="w-px bg-border hidden md:block" />
+          <div className="w-px bg-border hidden sm:block" />
           <div className="text-center">
-            <p className="text-4xl font-bold text-foreground">4.9/5</p>
-            <p className="text-muted-foreground">Average Rating</p>
+            <p className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground">4.9/5</p>
+            <p className="text-muted-foreground text-xs sm:text-sm">Average Rating</p>
           </div>
         </motion.div>
       </div>

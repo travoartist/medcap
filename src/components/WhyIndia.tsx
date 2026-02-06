@@ -173,7 +173,7 @@ export default function WhyIndia() {
       } : {}} transition={{
         duration: 0.6,
         delay: 0.4
-      }} className="grid grid-cols-2 lg:grid-cols-4 gap-6 mt-20">
+      }} className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 mt-10 sm:mt-14">
           {stats.map((stat, index) => <motion.div key={stat.label} initial={{
           opacity: 0,
           y: 20
@@ -184,14 +184,14 @@ export default function WhyIndia() {
           duration: 0.4,
           delay: 0.5 + index * 0.1
         }} className="card-premium text-center">
-              <div className="w-14 h-14 rounded-2xl bg-primary/20 flex items-center justify-center mx-auto mb-4">
-                <stat.icon className="w-7 h-7 text-primary-deep" />
+              <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl sm:rounded-2xl bg-primary/20 flex items-center justify-center mx-auto mb-2 sm:mb-3">
+                <stat.icon className="w-5 h-5 sm:w-6 sm:h-6 text-primary-deep" />
               </div>
-              <p className="text-3xl md:text-4xl font-bold text-foreground mb-1">
+              <p className="text-xl sm:text-2xl md:text-3xl font-bold text-foreground mb-0.5">
                 {stat.value}
               </p>
-              <p className="font-medium text-primary-deep mb-2">{stat.label}</p>
-              <p className="text-sm text-muted-foreground">{stat.description}</p>
+              <p className="font-medium text-primary-deep text-xs sm:text-sm mb-1">{stat.label}</p>
+              <p className="text-xs text-muted-foreground hidden sm:block">{stat.description}</p>
             </motion.div>)}
         </motion.div>
       </div>

@@ -95,7 +95,7 @@ export default function Hero() {
           y: 0
         }} transition={{
           delay: 0.4
-        }} className="flex flex-wrap justify-center gap-4 md:gap-8 mb-12">
+        }} className="flex flex-wrap justify-center gap-3 sm:gap-6 mb-8 sm:mb-10">
             {journeySteps.map((step, index) => <motion.div key={step.label} initial={{
             opacity: 0,
             y: 20
@@ -104,10 +104,10 @@ export default function Hero() {
             y: 0
           }} transition={{
             delay: 0.5 + index * 0.1
-          }} className="flex items-center gap-2 text-white drop-shadow-[0_1px_6px_rgba(0,0,0,0.4)]">
-                <step.icon className="w-5 h-5" />
-                <span className="text-sm font-sans md:text-lg font-extrabold">{step.label}</span>
-                {index < journeySteps.length - 1 && <span className="hidden md:inline text-white/60 ml-4">→</span>}
+          }} className="flex items-center gap-1.5 sm:gap-2 text-white drop-shadow-[0_1px_6px_rgba(0,0,0,0.4)]">
+                <step.icon className="w-4 h-4 sm:w-5 sm:h-5" />
+                <span className="text-xs sm:text-sm md:text-base font-sans font-bold">{step.label}</span>
+                {index < journeySteps.length - 1 && <span className="hidden sm:inline text-white/60 ml-2 sm:ml-4">→</span>}
               </motion.div>)}
           </motion.div>
 
@@ -120,12 +120,12 @@ export default function Hero() {
           y: 0
         }} transition={{
           delay: 0.6
-        }} className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <button onClick={() => scrollToSection("#contact")} className="btn-premium text-lg px-10 py-5">
+        }} className="flex flex-col sm:flex-row items-center justify-center gap-3">
+            <button onClick={() => scrollToSection("#contact")} className="btn-premium text-sm sm:text-base px-6 sm:px-8 py-3 sm:py-4 w-full sm:w-auto">
               Get Your Free Quote
             </button>
-            <button onClick={() => scrollToSection("#dentists")} className="btn-premium-outline bg-cream/10 backdrop-blur-sm border-cream/40 text-cream hover:bg-cream/20">
-              <Play className="w-5 h-5" />
+            <button onClick={() => scrollToSection("#dentists")} className="btn-premium-outline bg-cream/10 backdrop-blur-sm border-cream/40 text-cream hover:bg-cream/20 text-sm sm:text-base px-6 sm:px-8 py-3 sm:py-4 w-full sm:w-auto">
+              <Play className="w-4 h-4 sm:w-5 sm:h-5" />
               Meet Our Dentists
             </button>
           </motion.div>

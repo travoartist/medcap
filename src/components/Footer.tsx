@@ -74,9 +74,9 @@ export default function Footer() {
           </div>
 
           {/* Services */}
-          <div>
-            <h4 className="font-semibold text-cream mb-4">Services</h4>
-            <ul className="space-y-3">
+          <div className="hidden md:block">
+            <h4 className="font-semibold text-cream mb-3 text-sm">Services</h4>
+            <ul className="space-y-2">
               {footerLinks.services.map((link) => (
                 <li key={link.label}>
                   <a
@@ -85,7 +85,7 @@ export default function Footer() {
                       e.preventDefault();
                       scrollToSection(link.href);
                     }}
-                    className="text-cream/60 hover:text-primary transition-colors"
+                    className="text-cream/60 hover:text-primary transition-colors text-sm"
                   >
                     {link.label}
                   </a>
@@ -96,8 +96,8 @@ export default function Footer() {
 
           {/* Company */}
           <div>
-            <h4 className="font-semibold text-cream mb-4">Company</h4>
-            <ul className="space-y-3">
+            <h4 className="font-semibold text-cream mb-3 text-sm">Company</h4>
+            <ul className="space-y-2">
               {footerLinks.company.map((link) => (
                 <li key={link.label}>
                   <a
@@ -106,7 +106,7 @@ export default function Footer() {
                       e.preventDefault();
                       scrollToSection(link.href);
                     }}
-                    className="text-cream/60 hover:text-primary transition-colors"
+                    className="text-cream/60 hover:text-primary transition-colors text-sm"
                   >
                     {link.label}
                   </a>
@@ -117,8 +117,8 @@ export default function Footer() {
 
           {/* Support */}
           <div>
-            <h4 className="font-semibold text-cream mb-4">Support</h4>
-            <ul className="space-y-3">
+            <h4 className="font-semibold text-cream mb-3 text-sm">Support</h4>
+            <ul className="space-y-2">
               {footerLinks.support.map((link) => (
                 <li key={link.label}>
                   <a
@@ -129,7 +129,7 @@ export default function Footer() {
                         scrollToSection(link.href);
                       }
                     }}
-                    className="text-cream/60 hover:text-primary transition-colors"
+                    className="text-cream/60 hover:text-primary transition-colors text-sm"
                   >
                     {link.label}
                   </a>
@@ -140,36 +140,33 @@ export default function Footer() {
         </div>
 
         {/* Divider */}
-        <div className="h-px bg-cream/10 mb-8" />
+        <div className="h-px bg-cream/10 mb-6" />
 
         {/* Bottom Footer */}
-        <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+        <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
           {/* Copyright */}
-          <div className="flex items-center gap-2 text-cream/50 text-sm">
-            <span>© 2026 MedCap Global – Premium Dental Excellence.</span>
-            <span className="hidden md:inline">Made with</span>
-            <Heart className="w-4 h-4 text-primary hidden md:inline" />
-            <span className="hidden md:inline">for global patients</span>
+          <div className="flex items-center gap-2 text-cream/50 text-xs sm:text-sm text-center sm:text-left">
+            <span>© 2026 MedCap Global</span>
           </div>
 
           {/* Social Links */}
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-3">
             {socialLinks.map((social) => (
               <motion.a
                 key={social.label}
                 href={social.href}
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.95 }}
-                className="w-10 h-10 rounded-full bg-cream/10 flex items-center justify-center hover:bg-primary/30 transition-colors"
+                className="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-cream/10 flex items-center justify-center hover:bg-primary/30 transition-colors"
                 aria-label={social.label}
               >
-                <social.icon className="w-5 h-5" />
+                <social.icon className="w-4 h-4" />
               </motion.a>
             ))}
           </div>
 
           {/* Legal Links */}
-          <div className="flex items-center gap-6 text-sm">
+          <div className="flex items-center gap-4 text-xs sm:text-sm">
             {footerLinks.legal.map((link) => (
               <a
                 key={link.label}

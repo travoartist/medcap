@@ -194,20 +194,20 @@
     box-shadow: var(--shadow-elevated);
   }
 
-  /* Cards */
+  /* Cards - Mobile optimized */
   .card-premium {
-    @apply rounded-2xl p-8 transition-all duration-500;
+    @apply rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8 transition-all duration-500;
     background: var(--gradient-card);
     box-shadow: var(--shadow-card);
   }
 
   .card-premium:hover {
-    transform: translateY(-8px);
+    transform: translateY(-4px);
     box-shadow: var(--shadow-elevated);
   }
 
   .card-glass {
-    @apply rounded-2xl p-6 backdrop-blur-md;
+    @apply rounded-xl sm:rounded-2xl p-4 sm:p-6 backdrop-blur-md;
     background: hsl(var(--cream) / 0.8);
     border: 1px solid hsl(var(--border) / 0.5);
   }
