@@ -194,36 +194,36 @@
     box-shadow: var(--shadow-elevated);
   }
 
-  /* Cards */
+  /* Cards - Mobile optimized */
   .card-premium {
-    @apply rounded-2xl p-8 transition-all duration-500;
+    @apply rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8 transition-all duration-500;
     background: var(--gradient-card);
     box-shadow: var(--shadow-card);
   }
 
   .card-premium:hover {
-    transform: translateY(-8px);
+    transform: translateY(-4px);
     box-shadow: var(--shadow-elevated);
   }
 
   .card-glass {
-    @apply rounded-2xl p-6 backdrop-blur-md;
+    @apply rounded-xl sm:rounded-2xl p-4 sm:p-6 backdrop-blur-md;
     background: hsl(var(--cream) / 0.8);
     border: 1px solid hsl(var(--border) / 0.5);
   }
 
-  /* Section styling */
+  /* Section styling - Optimized for mobile */
   .section-padding {
-    @apply py-24 md:py-32 px-6;
+    @apply py-12 sm:py-16 md:py-20 lg:py-24 px-4 sm:px-6;
   }
 
   .section-title {
-    @apply text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-center;
+    @apply text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-center;
     color: hsl(var(--foreground));
   }
 
   .section-subtitle {
-    @apply text-lg md:text-xl text-center max-w-3xl mx-auto mb-16;
+    @apply text-base sm:text-lg md:text-xl text-center max-w-2xl mx-auto mb-8 sm:mb-12;
     color: hsl(var(--muted-foreground));
   }
 

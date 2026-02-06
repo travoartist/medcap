@@ -59,55 +59,55 @@ export default function RelaxationGallery() {
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-8 sm:mb-12"
         >
-          <span className="badge-premium mb-4 inline-block">Beyond Treatment</span>
+          <span className="badge-premium mb-3 inline-block text-xs sm:text-sm">Beyond Treatment</span>
           <h2 className="section-title">
             Care That <span className="text-primary-deep">Rejuvenates</span>
           </h2>
           <p className="section-subtitle">
-            Your dental journey becomes a transformative retreat with premium relaxation experiences
+            A transformative retreat with premium relaxation
           </p>
         </motion.div>
 
         {/* Gallery Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 mb-8 sm:mb-12">
           {galleryImages.map((image, index) => (
             <motion.div
               key={image.title}
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="group relative rounded-3xl overflow-hidden shadow-card"
+              className="group relative rounded-2xl sm:rounded-3xl overflow-hidden shadow-card"
             >
               <img
                 src={image.src}
                 alt={image.alt}
-                className="w-full h-72 object-cover transition-transform duration-700 group-hover:scale-110"
+                className="w-full h-48 sm:h-56 md:h-64 object-cover transition-transform duration-700 group-hover:scale-110"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-foreground/70 via-foreground/20 to-transparent" />
-              <div className="absolute bottom-0 left-0 right-0 p-6">
-                <h3 className="font-serif text-xl font-bold text-cream">{image.title}</h3>
+              <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-5">
+                <h3 className="font-serif text-base sm:text-lg font-bold text-cream">{image.title}</h3>
               </div>
             </motion.div>
           ))}
         </div>
 
         {/* Experience Cards */}
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
           {experiences.map((exp, index) => (
             <motion.div
               key={exp.title}
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.4, delay: 0.4 + index * 0.1 }}
-              className="card-glass text-center py-6"
+              className="card-glass text-center py-4 sm:py-5"
             >
-              <div className="w-12 h-12 rounded-xl bg-primary/20 flex items-center justify-center mx-auto mb-4">
-                <exp.icon className="w-6 h-6 text-primary-deep" />
+              <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-lg sm:rounded-xl bg-primary/20 flex items-center justify-center mx-auto mb-2 sm:mb-3">
+                <exp.icon className="w-5 h-5 sm:w-6 sm:h-6 text-primary-deep" />
               </div>
-              <h4 className="font-semibold text-foreground mb-1">{exp.title}</h4>
-              <p className="text-sm text-muted-foreground">{exp.description}</p>
+              <h4 className="font-semibold text-foreground text-sm sm:text-base mb-0.5">{exp.title}</h4>
+              <p className="text-xs sm:text-sm text-muted-foreground">{exp.description}</p>
             </motion.div>
           ))}
         </div>

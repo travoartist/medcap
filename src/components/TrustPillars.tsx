@@ -84,19 +84,19 @@ export default function TrustPillars() {
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-8 sm:mb-12"
         >
-          <span className="badge-premium mb-4 inline-block">Our Promise</span>
+          <span className="badge-premium mb-3 inline-block text-xs sm:text-sm">Our Promise</span>
           <h2 className="section-title">
             Premium <span className="text-primary-deep">Trust Pillars</span>
           </h2>
           <p className="section-subtitle">
-            Five foundational principles that define every patient experience at MedCap Global
+            Five principles that define every patient experience
           </p>
         </motion.div>
 
         {/* Pillars Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
           {pillars.map((pillar, index) => (
             <motion.div
               key={pillar.title}
@@ -104,21 +104,21 @@ export default function TrustPillars() {
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className={`card-premium group ${
-                index === pillars.length - 1 ? "md:col-span-2 lg:col-span-1" : ""
+                index === pillars.length - 1 ? "sm:col-span-2 lg:col-span-1" : ""
               }`}
             >
               <div
-                className={`w-16 h-16 rounded-2xl ${getColorClasses(
+                className={`w-12 h-12 sm:w-14 sm:h-14 rounded-xl sm:rounded-2xl ${getColorClasses(
                   pillar.color
-                )} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}
+                )} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}
               >
-                <pillar.icon className="w-8 h-8" />
+                <pillar.icon className="w-6 h-6 sm:w-7 sm:h-7" />
               </div>
-              <h3 className="font-serif text-2xl font-bold text-foreground mb-2">
+              <h3 className="font-serif text-lg sm:text-xl font-bold text-foreground mb-1">
                 {pillar.title}
               </h3>
-              <p className="text-primary-deep font-medium mb-4">{pillar.description}</p>
-              <p className="text-muted-foreground leading-relaxed">{pillar.details}</p>
+              <p className="text-primary-deep font-medium text-sm mb-2">{pillar.description}</p>
+              <p className="text-muted-foreground leading-relaxed text-sm">{pillar.details}</p>
             </motion.div>
           ))}
         </div>

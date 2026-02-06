@@ -72,19 +72,19 @@ export default function FAQ() {
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-8 sm:mb-12"
         >
-          <span className="badge-premium mb-4 inline-block">Common Questions</span>
+          <span className="badge-premium mb-3 inline-block text-xs sm:text-sm">Common Questions</span>
           <h2 className="section-title">
             Frequently Asked <span className="text-primary-deep">Questions</span>
           </h2>
           <p className="section-subtitle">
-            Everything you need to know about your premium dental care journey with MedCap Global
+            Everything about your dental care journey
           </p>
         </motion.div>
 
         {/* FAQ Accordion */}
-        <div className="space-y-4">
+        <div className="space-y-3">
           {faqs.map((faq, index) => (
             <motion.div
               key={index}
@@ -94,22 +94,22 @@ export default function FAQ() {
             >
               <button
                 onClick={() => setOpenIndex(openIndex === index ? null : index)}
-                className={`w-full text-left p-6 rounded-2xl transition-all duration-300 ${
+                className={`w-full text-left p-4 sm:p-5 rounded-xl sm:rounded-2xl transition-all duration-300 ${
                   openIndex === index
                     ? "bg-cream shadow-card"
                     : "bg-accent/50 hover:bg-cream/80"
                 }`}
                 aria-expanded={openIndex === index}
               >
-                <div className="flex items-start justify-between gap-4">
-                  <div className="flex items-start gap-4">
-                    <div className="w-8 h-8 rounded-lg bg-primary/20 flex items-center justify-center flex-shrink-0 mt-0.5">
-                      <HelpCircle className="w-4 h-4 text-primary-deep" />
+                <div className="flex items-start justify-between gap-3">
+                  <div className="flex items-start gap-3">
+                    <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-lg bg-primary/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                      <HelpCircle className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-primary-deep" />
                     </div>
-                    <span className="font-semibold text-foreground text-left">{faq.question}</span>
+                    <span className="font-semibold text-foreground text-left text-sm sm:text-base">{faq.question}</span>
                   </div>
                   <ChevronDown
-                    className={`w-5 h-5 text-muted-foreground flex-shrink-0 transition-transform duration-300 ${
+                    className={`w-4 h-4 sm:w-5 sm:h-5 text-muted-foreground flex-shrink-0 transition-transform duration-300 ${
                       openIndex === index ? "rotate-180" : ""
                     }`}
                   />
@@ -123,7 +123,7 @@ export default function FAQ() {
                   transition={{ duration: 0.3 }}
                   className="overflow-hidden"
                 >
-                  <p className="text-muted-foreground mt-4 pl-12 leading-relaxed">
+                  <p className="text-muted-foreground mt-3 pl-10 sm:pl-11 leading-relaxed text-sm">
                     {faq.answer}
                   </p>
                 </motion.div>

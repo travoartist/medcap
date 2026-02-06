@@ -43,27 +43,27 @@ export default function Navbar() {
             : "bg-transparent"
         }`}
       >
-        <div className="container mx-auto px-6 py-4">
+        <div className="container mx-auto px-4 sm:px-6 py-3 sm:py-4">
           <div className="flex items-center justify-between">
             {/* Logo */}
             <a
               href="#"
-              className="flex items-center gap-2"
+              className="flex items-center gap-1.5 sm:gap-2"
               onClick={(e) => {
                 e.preventDefault();
                 window.scrollTo({ top: 0, behavior: "smooth" });
               }}
             >
-              <div className="w-10 h-10 rounded-full bg-primary-deep flex items-center justify-center">
+              <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-primary-deep flex items-center justify-center">
                 <svg
                   viewBox="0 0 24 24"
-                  className="w-6 h-6 text-cream"
+                  className="w-5 h-5 sm:w-6 sm:h-6 text-cream"
                   fill="currentColor"
                 >
                   <path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm0 18c-4.4 0-8-3.6-8-8s3.6-8 8-8 8 3.6 8 8-3.6 8-8 8zm-1-6.5l-3-3 1.4-1.4 1.6 1.6 4.6-4.6 1.4 1.4-6 6z" />
                 </svg>
               </div>
-              <span className="font-serif text-xl font-bold text-foreground">
+              <span className="font-serif text-lg sm:text-xl font-bold text-foreground">
                 MedCap <span className="text-primary-deep">Global</span>
               </span>
             </a>

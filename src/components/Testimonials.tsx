@@ -61,19 +61,19 @@ export default function Testimonials() {
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-8 sm:mb-12"
         >
-          <span className="badge-premium mb-4 inline-block">Real Experiences</span>
+          <span className="badge-premium mb-3 inline-block text-xs sm:text-sm">Real Experiences</span>
           <h2 className="section-title">
             Global Patient <span className="text-primary-deep">Stories</span>
           </h2>
           <p className="section-subtitle">
-            Hear from patients worldwide who trusted MedCap Global for their dental care journey
+            Patients worldwide trust MedCap Global
           </p>
         </motion.div>
 
         {/* Testimonials Grid */}
-        <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+        <div className="grid sm:grid-cols-2 gap-4 sm:gap-6 max-w-5xl mx-auto">
           {testimonials.map((testimonial, index) => (
             <motion.div
               key={testimonial.name}
@@ -83,41 +83,41 @@ export default function Testimonials() {
               className="card-premium relative"
             >
               {/* Quote Icon */}
-              <div className="absolute top-6 right-6 text-primary/20">
-                <Quote className="w-12 h-12" />
+              <div className="absolute top-4 right-4 text-primary/20">
+                <Quote className="w-8 h-8 sm:w-10 sm:h-10" />
               </div>
 
               {/* Rating */}
-              <div className="flex gap-1 mb-4">
+              <div className="flex gap-0.5 mb-3">
                 {[...Array(testimonial.rating)].map((_, i) => (
-                  <Star key={i} className="w-5 h-5 text-gold fill-gold" />
+                  <Star key={i} className="w-4 h-4 text-gold fill-gold" />
                 ))}
               </div>
 
               {/* Quote */}
-              <p className="text-foreground/80 leading-relaxed mb-6 text-lg italic">
+              <p className="text-foreground/80 leading-relaxed mb-4 text-sm sm:text-base italic line-clamp-4 sm:line-clamp-none">
                 "{testimonial.quote}"
               </p>
 
               {/* Divider */}
-              <div className="h-px bg-border mb-6" />
+              <div className="h-px bg-border mb-4" />
 
               {/* Author */}
-              <div className="flex items-center justify-between">
-                <div>
-                  <p className="font-serif font-bold text-foreground text-lg">
+              <div className="flex items-center justify-between gap-2">
+                <div className="min-w-0">
+                  <p className="font-serif font-bold text-foreground text-sm sm:text-base truncate">
                     {testimonial.name}
                   </p>
-                  <div className="flex items-center gap-2 text-muted-foreground text-sm">
+                  <div className="flex items-center gap-1.5 text-muted-foreground text-xs sm:text-sm">
                     <span>{testimonial.flag}</span>
-                    <MapPin className="w-3 h-3" />
-                    <span>{testimonial.location}</span>
+                    <MapPin className="w-3 h-3 flex-shrink-0" />
+                    <span className="truncate">{testimonial.location}</span>
                   </div>
-                  <p className="text-primary-deep text-sm mt-1">{testimonial.treatment}</p>
+                  <p className="text-primary-deep text-xs sm:text-sm mt-0.5">{testimonial.treatment}</p>
                 </div>
-                <div className="text-right">
-                  <p className="text-sm text-muted-foreground">Saved</p>
-                  <p className="font-bold text-secondary-deep text-lg">{testimonial.savings}</p>
+                <div className="text-right flex-shrink-0">
+                  <p className="text-xs text-muted-foreground">Saved</p>
+                  <p className="font-bold text-secondary-deep text-sm sm:text-base">{testimonial.savings}</p>
                 </div>
               </div>
             </motion.div>
@@ -129,21 +129,21 @@ export default function Testimonials() {
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5, delay: 0.5 }}
-          className="flex flex-wrap justify-center gap-8 mt-16"
+          className="flex flex-wrap justify-center gap-6 sm:gap-8 mt-10 sm:mt-14"
         >
           <div className="text-center">
-            <p className="text-4xl font-bold text-foreground">12,000+</p>
-            <p className="text-muted-foreground">Happy Patients</p>
+            <p className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground">12,000+</p>
+            <p className="text-muted-foreground text-xs sm:text-sm">Happy Patients</p>
           </div>
-          <div className="w-px bg-border hidden md:block" />
+          <div className="w-px bg-border hidden sm:block" />
           <div className="text-center">
-            <p className="text-4xl font-bold text-foreground">50+</p>
-            <p className="text-muted-foreground">Countries Served</p>
+            <p className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground">50+</p>
+            <p className="text-muted-foreground text-xs sm:text-sm">Countries Served</p>
           </div>
-          <div className="w-px bg-border hidden md:block" />
+          <div className="w-px bg-border hidden sm:block" />
           <div className="text-center">
-            <p className="text-4xl font-bold text-foreground">4.9/5</p>
-            <p className="text-muted-foreground">Average Rating</p>
+            <p className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground">4.9/5</p>
+            <p className="text-muted-foreground text-xs sm:text-sm">Average Rating</p>
           </div>
         </motion.div>
       </div>

@@ -47,7 +47,7 @@ export default function Hero() {
     }} />
 
       {/* Content */}
-      <div className="relative z-10 container mx-auto px-6 py-32 text-center">
+      <div className="relative z-10 container mx-auto px-4 sm:px-6 py-20 sm:py-24 md:py-28 text-center">
         <motion.div initial={{
         opacity: 0,
         y: 30
@@ -56,7 +56,7 @@ export default function Hero() {
         y: 0
       }} transition={{
         duration: 0.8
-      }} className="max-w-5xl mx-auto">
+      }} className="max-w-4xl mx-auto">
           {/* Badge */}
           <motion.div initial={{
           opacity: 0,
@@ -66,15 +66,15 @@ export default function Hero() {
           scale: 1
         }} transition={{
           delay: 0.2
-        }} className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-gradient-to-r from-amber-50/90 to-orange-50/90 backdrop-blur-sm mb-8 shadow-soft border border-amber-200/50">
-            <Sparkles className="w-4 h-4 text-amber-600" />
-            <span className="text-sm font-medium text-amber-900">
-              🙏 Namaste! Premium Care Awaits You
+        }} className="inline-flex items-center gap-1.5 sm:gap-2 px-3 sm:px-5 py-2 rounded-full bg-gradient-to-r from-amber-50/90 to-orange-50/90 backdrop-blur-sm mb-4 sm:mb-6 shadow-soft border border-amber-200/50">
+            <Sparkles className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-amber-600" />
+            <span className="text-xs sm:text-sm font-medium text-amber-900">
+              🙏 Namaste! Premium Care Awaits
             </span>
           </motion.div>
 
           {/* Main Headline */}
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-serif font-bold text-white mb-6 leading-tight drop-shadow-[0_2px_10px_rgba(0,0,0,0.5)]">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-white mb-4 sm:mb-6 leading-tight drop-shadow-[0_2px_10px_rgba(0,0,0,0.5)]">
             Welcome to{" "}
             <span className="bg-gradient-to-r from-amber-200 via-orange-200 to-yellow-200 bg-clip-text text-transparent drop-shadow-lg">
               India's Finest
@@ -83,8 +83,8 @@ export default function Hero() {
           </h1>
 
           {/* Subheadline */}
-          <p className="text-lg md:text-xl text-white/95 mb-10 max-w-3xl mx-auto leading-relaxed drop-shadow-[0_1px_8px_rgba(0,0,0,0.4)]">
-            Experience heartfelt hospitality meets world-class expertise. We welcome you to a journey of premium dental care with the warmth India is known for.</p>
+          <p className="text-sm sm:text-base md:text-lg text-white/95 mb-6 sm:mb-8 max-w-2xl mx-auto leading-relaxed drop-shadow-[0_1px_8px_rgba(0,0,0,0.4)] px-2">
+            Experience heartfelt hospitality meets world-class expertise. Premium dental care with the warmth India is known for.</p>
 
           {/* Journey Steps */}
           <motion.div initial={{
@@ -95,7 +95,7 @@ export default function Hero() {
           y: 0
         }} transition={{
           delay: 0.4
-        }} className="flex flex-wrap justify-center gap-4 md:gap-8 mb-12">
+        }} className="flex flex-wrap justify-center gap-3 sm:gap-6 mb-8 sm:mb-10">
             {journeySteps.map((step, index) => <motion.div key={step.label} initial={{
             opacity: 0,
             y: 20
@@ -104,10 +104,10 @@ export default function Hero() {
             y: 0
           }} transition={{
             delay: 0.5 + index * 0.1
-          }} className="flex items-center gap-2 text-white drop-shadow-[0_1px_6px_rgba(0,0,0,0.4)]">
-                <step.icon className="w-5 h-5" />
-                <span className="text-sm font-sans md:text-lg font-extrabold">{step.label}</span>
-                {index < journeySteps.length - 1 && <span className="hidden md:inline text-white/60 ml-4">→</span>}
+          }} className="flex items-center gap-1.5 sm:gap-2 text-white drop-shadow-[0_1px_6px_rgba(0,0,0,0.4)]">
+                <step.icon className="w-4 h-4 sm:w-5 sm:h-5" />
+                <span className="text-xs sm:text-sm md:text-base font-sans font-bold">{step.label}</span>
+                {index < journeySteps.length - 1 && <span className="hidden sm:inline text-white/60 ml-2 sm:ml-4">→</span>}
               </motion.div>)}
           </motion.div>
 
@@ -120,12 +120,12 @@ export default function Hero() {
           y: 0
         }} transition={{
           delay: 0.6
-        }} className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <button onClick={() => scrollToSection("#contact")} className="btn-premium text-lg px-10 py-5">
+        }} className="flex flex-col sm:flex-row items-center justify-center gap-3">
+            <button onClick={() => scrollToSection("#contact")} className="btn-premium text-sm sm:text-base px-6 sm:px-8 py-3 sm:py-4 w-full sm:w-auto">
               Get Your Free Quote
             </button>
-            <button onClick={() => scrollToSection("#dentists")} className="btn-premium-outline bg-cream/10 backdrop-blur-sm border-cream/40 text-cream hover:bg-cream/20">
-              <Play className="w-5 h-5" />
+            <button onClick={() => scrollToSection("#dentists")} className="btn-premium-outline bg-cream/10 backdrop-blur-sm border-cream/40 text-cream hover:bg-cream/20 text-sm sm:text-base px-6 sm:px-8 py-3 sm:py-4 w-full sm:w-auto">
+              <Play className="w-4 h-4 sm:w-5 sm:h-5" />
               Meet Our Dentists
             </button>
           </motion.div>

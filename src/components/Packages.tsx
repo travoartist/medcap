@@ -87,35 +87,35 @@ export default function Packages() {
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-8 sm:mb-12"
         >
-          <span className="badge-premium mb-4 inline-block">Transparent Pricing</span>
+          <span className="badge-premium mb-3 inline-block text-xs sm:text-sm">Transparent Pricing</span>
           <h2 className="section-title">
             Premium Care <span className="text-primary-deep">Packages</span>
           </h2>
           <p className="section-subtitle">
-            All-inclusive packages with no hidden fees. Choose the experience that fits your needs.
+            All-inclusive packages with no hidden fees
           </p>
         </motion.div>
 
         {/* Packages Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 max-w-6xl mx-auto">
           {packages.map((pkg, index) => (
             <motion.div
               key={pkg.name}
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: index * 0.15 }}
-              className={`relative rounded-3xl p-8 transition-all duration-500 ${
+              className={`relative rounded-2xl sm:rounded-3xl p-4 sm:p-6 transition-all duration-500 ${
                 pkg.highlight
-                  ? "bg-gradient-to-b from-gold-light/50 to-cream shadow-elevated scale-105 border-2 border-gold/30"
+                  ? "bg-gradient-to-b from-gold-light/50 to-cream shadow-elevated sm:scale-105 border-2 border-gold/30 order-first sm:order-none"
                   : "card-premium"
               }`}
             >
               {/* Popular Badge */}
               {pkg.highlight && (
-                <div className="absolute -top-4 left-1/2 -translate-x-1/2">
-                  <span className="bg-gold text-foreground px-4 py-1.5 rounded-full text-sm font-semibold">
+                <div className="absolute -top-3 left-1/2 -translate-x-1/2">
+                  <span className="bg-gold text-foreground px-3 py-1 rounded-full text-xs sm:text-sm font-semibold whitespace-nowrap">
                     Most Popular
                   </span>
                 </div>
@@ -123,7 +123,7 @@ export default function Packages() {
 
               {/* Icon */}
               <div
-                className={`w-16 h-16 rounded-2xl flex items-center justify-center mb-6 ${
+                className={`w-12 h-12 sm:w-14 sm:h-14 rounded-xl sm:rounded-2xl flex items-center justify-center mb-4 ${
                   pkg.highlight
                     ? "bg-gold/20"
                     : pkg.color === "primary"
@@ -132,7 +132,7 @@ export default function Packages() {
                 }`}
               >
                 <pkg.icon
-                  className={`w-8 h-8 ${
+                  className={`w-6 h-6 sm:w-7 sm:h-7 ${
                     pkg.highlight
                       ? "text-gold"
                       : pkg.color === "primary"
@@ -143,36 +143,41 @@ export default function Packages() {
               </div>
 
               {/* Package Info */}
-              <h3 className="font-serif text-2xl font-bold text-foreground mb-1">
+              <h3 className="font-serif text-xl sm:text-2xl font-bold text-foreground mb-1">
                 {pkg.name}
               </h3>
-              <p className="text-muted-foreground text-sm mb-4">{pkg.tagline}</p>
-              <p className="text-3xl font-bold text-foreground mb-6">{pkg.price}</p>
+              <p className="text-muted-foreground text-xs sm:text-sm mb-2">{pkg.tagline}</p>
+              <p className="text-2xl sm:text-3xl font-bold text-foreground mb-4">{pkg.price}</p>
 
               {/* Features */}
-              <ul className="space-y-3 mb-8">
-                {pkg.features.map((feature, idx) => (
-                  <li key={idx} className="flex items-start gap-3 text-sm">
+              <ul className="space-y-2 mb-6">
+                {pkg.features.slice(0, 6).map((feature, idx) => (
+                  <li key={idx} className="flex items-start gap-2 text-xs sm:text-sm">
                     <Check
-                      className={`w-5 h-5 flex-shrink-0 mt-0.5 ${
+                      className={`w-4 h-4 flex-shrink-0 mt-0.5 ${
                         pkg.highlight ? "text-gold" : "text-secondary-deep"
                       }`}
                     />
                     <span className="text-muted-foreground">{feature}</span>
                   </li>
                 ))}
+                {pkg.features.length > 6 && (
+                  <li className="text-xs text-primary-deep font-medium pl-6">
+                    +{pkg.features.length - 6} more benefits
+                  </li>
+                )}
               </ul>
 
               {/* CTA */}
               <button
                 onClick={scrollToContact}
-                className={`w-full py-4 rounded-full font-medium transition-all duration-300 ${
+                className={`w-full py-3 sm:py-4 rounded-full font-medium text-sm sm:text-base transition-all duration-300 ${
                   pkg.highlight
                     ? "btn-gold"
                     : "btn-premium-outline"
                 }`}
               >
-                Get My Custom Quote
+                Get Custom Quote
               </button>
             </motion.div>
           ))}

@@ -93,18 +93,18 @@ export default function Contact() {
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-8 sm:mb-12"
         >
-          <span className="badge-premium mb-4 inline-block">Start Your Journey</span>
+          <span className="badge-premium mb-3 inline-block text-xs sm:text-sm">Start Your Journey</span>
           <h2 className="section-title">
             Connect <span className="text-primary-deep">Globally</span>
           </h2>
           <p className="section-subtitle">
-            Get your personalized treatment plan with transparent pricing within 48 hours
+            Get your personalized plan within 48 hours
           </p>
         </motion.div>
 
-        <div className="grid lg:grid-cols-5 gap-12 max-w-6xl mx-auto">
+        <div className="grid lg:grid-cols-5 gap-6 sm:gap-8 max-w-6xl mx-auto">
           {/* Contact Form */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
