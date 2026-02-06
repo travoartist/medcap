@@ -87,19 +87,19 @@ export default function Packages() {
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-8 sm:mb-12"
         >
-          <span className="badge-premium mb-4 inline-block">Transparent Pricing</span>
+          <span className="badge-premium mb-3 inline-block text-xs sm:text-sm">Transparent Pricing</span>
           <h2 className="section-title">
             Premium Care <span className="text-primary-deep">Packages</span>
           </h2>
           <p className="section-subtitle">
-            All-inclusive packages with no hidden fees. Choose the experience that fits your needs.
+            All-inclusive packages with no hidden fees
           </p>
         </motion.div>
 
         {/* Packages Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 max-w-6xl mx-auto">
           {packages.map((pkg, index) => (
             <motion.div
               key={pkg.name}
