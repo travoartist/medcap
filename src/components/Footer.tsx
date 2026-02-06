@@ -45,10 +45,10 @@ export default function Footer() {
   };
 
   return (
-    <footer className="bg-foreground text-cream/80 pt-20 pb-8">
-      <div className="container mx-auto px-6">
+    <footer className="bg-foreground text-cream/80 pt-12 sm:pt-16 pb-6 sm:pb-8">
+      <div className="container mx-auto px-4 sm:px-6">
         {/* Main Footer */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-12 mb-16">
+        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6 sm:gap-8 mb-10 sm:mb-12">
           {/* Brand */}
           <div className="lg:col-span-2">
             <div className="flex items-center gap-2 mb-6">
