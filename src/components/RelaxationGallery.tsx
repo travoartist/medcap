@@ -59,19 +59,19 @@ export default function RelaxationGallery() {
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-8 sm:mb-12"
         >
-          <span className="badge-premium mb-4 inline-block">Beyond Treatment</span>
+          <span className="badge-premium mb-3 inline-block text-xs sm:text-sm">Beyond Treatment</span>
           <h2 className="section-title">
             Care That <span className="text-primary-deep">Rejuvenates</span>
           </h2>
           <p className="section-subtitle">
-            Your dental journey becomes a transformative retreat with premium relaxation experiences
+            A transformative retreat with premium relaxation
           </p>
         </motion.div>
 
         {/* Gallery Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 mb-8 sm:mb-12">
           {galleryImages.map((image, index) => (
             <motion.div
               key={image.title}
