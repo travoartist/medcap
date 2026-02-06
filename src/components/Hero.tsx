@@ -47,7 +47,7 @@ export default function Hero() {
     }} />
 
       {/* Content */}
-      <div className="relative z-10 container mx-auto px-6 py-32 text-center">
+      <div className="relative z-10 container mx-auto px-4 sm:px-6 py-20 sm:py-24 md:py-28 text-center">
         <motion.div initial={{
         opacity: 0,
         y: 30
@@ -56,7 +56,7 @@ export default function Hero() {
         y: 0
       }} transition={{
         duration: 0.8
-      }} className="max-w-5xl mx-auto">
+      }} className="max-w-4xl mx-auto">
           {/* Badge */}
           <motion.div initial={{
           opacity: 0,
@@ -66,15 +66,15 @@ export default function Hero() {
           scale: 1
         }} transition={{
           delay: 0.2
-        }} className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-gradient-to-r from-amber-50/90 to-orange-50/90 backdrop-blur-sm mb-8 shadow-soft border border-amber-200/50">
-            <Sparkles className="w-4 h-4 text-amber-600" />
-            <span className="text-sm font-medium text-amber-900">
-              🙏 Namaste! Premium Care Awaits You
+        }} className="inline-flex items-center gap-1.5 sm:gap-2 px-3 sm:px-5 py-2 rounded-full bg-gradient-to-r from-amber-50/90 to-orange-50/90 backdrop-blur-sm mb-4 sm:mb-6 shadow-soft border border-amber-200/50">
+            <Sparkles className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-amber-600" />
+            <span className="text-xs sm:text-sm font-medium text-amber-900">
+              🙏 Namaste! Premium Care Awaits
             </span>
           </motion.div>
 
           {/* Main Headline */}
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-serif font-bold text-white mb-6 leading-tight drop-shadow-[0_2px_10px_rgba(0,0,0,0.5)]">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-white mb-4 sm:mb-6 leading-tight drop-shadow-[0_2px_10px_rgba(0,0,0,0.5)]">
             Welcome to{" "}
             <span className="bg-gradient-to-r from-amber-200 via-orange-200 to-yellow-200 bg-clip-text text-transparent drop-shadow-lg">
               India's Finest
@@ -83,8 +83,8 @@ export default function Hero() {
           </h1>
 
           {/* Subheadline */}
-          <p className="text-lg md:text-xl text-white/95 mb-10 max-w-3xl mx-auto leading-relaxed drop-shadow-[0_1px_8px_rgba(0,0,0,0.4)]">
-            Experience heartfelt hospitality meets world-class expertise. We welcome you to a journey of premium dental care with the warmth India is known for.</p>
+          <p className="text-sm sm:text-base md:text-lg text-white/95 mb-6 sm:mb-8 max-w-2xl mx-auto leading-relaxed drop-shadow-[0_1px_8px_rgba(0,0,0,0.4)] px-2">
+            Experience heartfelt hospitality meets world-class expertise. Premium dental care with the warmth India is known for.</p>
 
           {/* Journey Steps */}
           <motion.div initial={{
