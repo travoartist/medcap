@@ -61,19 +61,19 @@ export default function Testimonials() {
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-8 sm:mb-12"
         >
-          <span className="badge-premium mb-4 inline-block">Real Experiences</span>
+          <span className="badge-premium mb-3 inline-block text-xs sm:text-sm">Real Experiences</span>
           <h2 className="section-title">
             Global Patient <span className="text-primary-deep">Stories</span>
           </h2>
           <p className="section-subtitle">
-            Hear from patients worldwide who trusted MedCap Global for their dental care journey
+            Patients worldwide trust MedCap Global
           </p>
         </motion.div>
 
         {/* Testimonials Grid */}
-        <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+        <div className="grid sm:grid-cols-2 gap-4 sm:gap-6 max-w-5xl mx-auto">
           {testimonials.map((testimonial, index) => (
             <motion.div
               key={testimonial.name}
