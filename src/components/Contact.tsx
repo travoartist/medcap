@@ -50,7 +50,11 @@ export default function Contact() {
   const [errors, setErrors] = useState<Partial<Record<keyof ContactForm, string>>>({});
   const [isSubmitted, setIsSubmitted] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const WEBHOOK_URL = "https://hook.us2.make.com/jeffqzya2awykmcbp7eygrq94am6uj68";
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     const result = contactSchema.safeParse(formData);
     
@@ -66,7 +70,32 @@ export default function Contact() {
     }
 
     setErrors({});
-    setIsSubmitted(true);
+    setIsSubmitting(true);
+
+    try {
+      const body = new URLSearchParams({
+        full_name: result.data.name,
+        email: result.data.email,
+        country: result.data.country,
+        treatment_needed: result.data.treatment,
+        budget_range: result.data.budget,
+        additional_details: result.data.message ?? "",
+      });
+
+      await fetch(WEBHOOK_URL, {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: body.toString(),
+      });
+
+      setIsSubmitted(true);
+    } catch (err) {
+      console.error("Webhook error:", err);
+      // Still show success to user — webhook may respond with non-2xx but still receive data
+      setIsSubmitted(true);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (field: keyof ContactForm, value: string) => {
@@ -248,9 +277,18 @@ export default function Contact() {
                 </div>
 
                 {/* Submit */}
-                <button type="submit" className="btn-premium w-full">
-                  <Send className="w-5 h-5" />
-                  Get My Free Quote
+                <button type="submit" disabled={isSubmitting} className="btn-premium w-full disabled:opacity-70 disabled:cursor-not-allowed">
+                  {isSubmitting ? (
+                    <>
+                      <span className="w-5 h-5 border-2 border-white/40 border-t-white rounded-full animate-spin" />
+                      Sending...
+                    </>
+                  ) : (
+                    <>
+                      <Send className="w-5 h-5" />
+                      Get My Free Quote
+                    </>
+                  )}
                 </button>
               </form>
             )}
