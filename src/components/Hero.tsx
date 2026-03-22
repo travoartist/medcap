@@ -75,16 +75,16 @@ export default function Hero() {
 
           {/* Main Headline */}
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-white mb-4 sm:mb-6 leading-tight drop-shadow-[0_2px_10px_rgba(0,0,0,0.5)]">
-            Welcome to{" "}
+            Get World-Class{" "}
             <span className="bg-gradient-to-r from-amber-200 via-orange-200 to-yellow-200 bg-clip-text text-transparent drop-shadow-lg">
-              India's Finest
+              Dental Implants in India
             </span>{" "}
-            Dental Care
+            & Save Up to 70%
           </h1>
 
           {/* Subheadline */}
           <p className="text-sm sm:text-base md:text-lg text-white/95 mb-6 sm:mb-8 max-w-2xl mx-auto leading-relaxed drop-shadow-[0_1px_8px_rgba(0,0,0,0.4)] px-2">
-            Experience heartfelt hospitality meets world-class expertise. Premium dental care with the warmth India is known for.</p>
+            Trusted by International Patients — Experience heartfelt hospitality meets world-class expertise with the warmth India is known for.</p>
 
           {/* Journey Steps */}
           <motion.div initial={{
